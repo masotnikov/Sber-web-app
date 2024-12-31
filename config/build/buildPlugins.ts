@@ -2,11 +2,10 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import webpack, {Configuration} from "webpack";
 import {BuildOptions} from "./types/types";
 
-export function buildPlugins(options : BuildOptions): Configuration['plugins'] {
+export function buildPlugins({paths}: BuildOptions): Configuration['plugins'] {
     return [
         new HtmlWebpackPlugin({
-            template: options.paths.html,
-            filename: "[contenthash:8].html"
+            template: paths.html
         }),
         new webpack.ProgressPlugin(),
     ]

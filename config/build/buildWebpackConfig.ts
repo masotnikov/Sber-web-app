@@ -9,11 +9,9 @@ export function buildWebpackConfig (options: BuildOptions): webpack.Configuratio
     return {
         mode: 'production',
         devtool: 'inline-source-map',
-        entry: {
-            path: options.paths.entry,
-        },
+        entry: options.paths.entry,
         module: {
-            rules: buildLoaders(),
+            rules: buildLoaders(options),
         },
         output: {
             filename: '[contenthash:8].js',
