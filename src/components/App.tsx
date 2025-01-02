@@ -1,10 +1,12 @@
 import React from 'react';
-import './app.css'
+import './index.scss';
+import TestComp from "./TestComp/TestComp";
 
 const App = () => {
     return (
-        <div className="app">
-            <h1>Privet, Andrey!!</h1>
+        <div className="App">
+            <h2>Hello World!</h2>
+            <TestComp />
         </div>
     );
 };
