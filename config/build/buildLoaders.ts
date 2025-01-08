@@ -1,13 +1,27 @@
-import {ModuleOptions} from 'webpack';
-import {BuildOptions} from "./types/types";
+import { ModuleOptions } from "webpack";
+import { BuildOptions } from "./types/types";
 import MiniCssExtractPlugin from "mini-css-extract-plugin";
+import ReactRefreshTypeScript from "react-refresh-typescript";
 
-export function buildLoaders({isDev}: BuildOptions): ModuleOptions['rules'] {
+export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
+    const isDev = options.mode === "development";
+
     const tsLoader = {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
         exclude: /node_modules/,
-    }
+        test: /\.tsx?$/,
+        use: [
+            {
+                loader: "ts-loader",
+                options: {
+                    transpileOnly: true,
+                    getCustomTransformers: () => ({
+                        before: isDev ? [ReactRefreshTypeScript()].filter(Boolean) : [],
+                    }),
+                },
+            },
+        ],
+    };
+
 
     const cssLoader = {
         test: /\.(css|s[ac]ss)$/i,
@@ -18,11 +32,14 @@ export function buildLoaders({isDev}: BuildOptions): ModuleOptions['rules'] {
                 options: {
                     modules: {
                         namedExport: false,
-                        exportLocalsConvention: 'as-is',
+                        exportLocalsConvention: "as-is",
+                        auto: (resPath: string) => Boolean(resPath.includes(".module.")),
+                        localIdentName: isDev
+                            ? "[path][name]--[local]--[hash:base64:4]"
+                            : "[hash:base64:8]",
                     },
                 },
             },
-
             "sass-loader",
         ],
     };
@@ -30,5 +47,5 @@ export function buildLoaders({isDev}: BuildOptions): ModuleOptions['rules'] {
     return [
         tsLoader,
         cssLoader,
-    ]
+    ];
 }
