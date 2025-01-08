@@ -1,13 +1,12 @@
 import React from 'react';
-import styles from './App.module.scss';
-import TestComp from "./TestComp/TestComp";
+import './index.scss';
 
 const App = () => {
     return (
-        <div className={styles.App}>
-            <h2>hello dddddd!</h2>
-            <TestComp arg={'4'}/>
-           d
+        <div className='app'>
+            <h2>hello world!</h2>
+            <div>{__PLATFORM__}</div>
+
         </div>
     );
 };
