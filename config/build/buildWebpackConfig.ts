@@ -21,7 +21,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
             clean: true,
         },
         plugins: buildPlugins(options),
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         devServer: buildDevServer(options)
     }
 }

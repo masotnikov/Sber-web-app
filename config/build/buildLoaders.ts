@@ -22,6 +22,34 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
         ],
     };
 
+    const assetLoader = {
+        test: /\.(png|jpe?g|woff2?)$/i,
+        type: 'asset/resource',
+    };
+
+
+    const svgrLoader = {
+        test: /\.svg$/i,
+        use: [
+            {
+                loader: '@svgr/webpack',
+                options: {
+                    icon: true,
+                    svgoConfig: {
+                        plugins: [
+                            {
+                                name: 'convertColors',
+                                params: {
+                                    currentColor: true,
+                                }
+                            }
+                        ]
+                    }
+                }
+            }
+        ],
+    }
+
 
     const cssLoader = {
         test: /\.(css|s[ac]ss)$/i,
@@ -45,7 +73,9 @@ export function buildLoaders(options: BuildOptions): ModuleOptions["rules"] {
     };
 
     return [
+        assetLoader,
         tsLoader,
         cssLoader,
+        svgrLoader
     ];
 }
