@@ -1,0 +1,15 @@
+@use "normalize" as *;
+@use "global" as *;
+@use "fonts" as *;
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #b3b32d;
+  font-family: 'SB Sans', sans-serif;
+  font-size: 36px;
+}
