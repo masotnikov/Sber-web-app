@@ -1,0 +1,7 @@
+.Header {
+  display: flex;
+}
+
+.Header > * {
+  flex: 1 1 0;
+}
