@@ -3,19 +3,14 @@ import {MainPage} from "@/pages/MainPage";
 import {SavingsPage} from "@/pages/SavingsPage";
 import PaymentsPage from "@/pages/PaymentsPage/ui/PaymentsPage";
 import {HistoryPage} from "@/pages/HistoryPage";
-
-export enum AppRoutes {
-    MAIN = 'main',
-    SAVINGS = 'savings',
-    PAYMENTS = 'payments',
-    HISTORY = 'history',
-}
+import {AppRoutes} from "@/shared/const/router";
 
 export const RoutePath: Record<AppRoutes, string> = {
-    [AppRoutes.MAIN]: 'main',
-    [AppRoutes.SAVINGS]: 'savings',
-    [AppRoutes.PAYMENTS]: 'payments',
-    [AppRoutes.HISTORY]: 'history',
+    [AppRoutes.MAIN]: '/main',
+    [AppRoutes.SAVINGS]: '/savings',
+    [AppRoutes.PAYMENTS]: '/payments',
+    [AppRoutes.HISTORY]: '/history',
+    [AppRoutes.NOT_FOUND]: '*',
 }
 
 export const RouteConfig: RouteProps[] = [
