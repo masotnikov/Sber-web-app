@@ -1,15 +1,45 @@
 @use "normalize" as *;
 @use "global" as *;
 @use "fonts" as *;
+@use "variables" as *;
 
 .app {
-  display: flex;
-  flex-direction: column;
+  width: 100vw;
   min-height: 100vh;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: #b3b32d;
-  font-family: 'SB Sans', sans-serif;
-  font-size: 36px;
+  padding: 16px;
 }
+
+
+.scaffold__section {
+  display: flex;
+  width: 100%;
+  flex: 1 1 auto;
+  align-self: stretch;
+  flex-flow: column nowrap;
+}
+
+.scaffold__content {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.scaffold__nav {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1 0;
+}
+
+.scaffold__main {
+  display: flex;
+  align-items: flex-start;
+  flex: 1 1 0;
+}
+
+.scaffold__aside {
+  display: flex;
+  flex: 1 1 0;
+  justify-content: flex-end;
+  align-items: center
+}
+
