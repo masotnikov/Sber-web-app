@@ -2,7 +2,6 @@ import {FC} from "react";
 import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from "./Header.module.scss";
 import {LinkLogo} from "@/shared/ui/LinkLogo/LinkLogo";
-import {CatalogLink} from "@/shared/ui/CatalogLink/CatalogLink";
 import {HeaderMainPanel} from "@/widgets/Header/ui/HeaderMainPanel";
 import {getRouteMain} from "@/shared/const/router";
 
