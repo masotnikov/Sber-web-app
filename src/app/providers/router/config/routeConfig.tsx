@@ -11,6 +11,7 @@ export const RoutePath: Record<AppRoutes, string> = {
     [AppRoutes.PAYMENTS]: '/payments',
     [AppRoutes.HISTORY]: '/history',
     [AppRoutes.NOT_FOUND]: '*',
+    [AppRoutes.CATALOG]: '/catalog'
 }
 
 export const RouteConfig: RouteProps[] = [
