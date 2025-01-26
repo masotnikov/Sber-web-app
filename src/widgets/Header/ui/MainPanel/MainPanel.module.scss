@@ -1,0 +1,39 @@
+.MainPanel {
+  display: flex;
+  align-items: center;
+  width: 720px;
+}
+
+.searchWrapper {
+  display: flex;
+  flex-grow: 1;
+  position: relative;
+}
+
+.searchInput {
+  height: 48px;
+  width: 100%;
+  padding-right: 80px;
+  padding-left: 36px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 12px;
+  background-color: rgba(38, 38, 38, 0.04);
+
+
+  &::placeholder {
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+    letter-spacing: -0.3px;
+
+  }
+
+  &:hover {
+    background-color: rgba(38, 38, 38, 0.08);
+    transition: background-color 100ms linear;
+  }
+
+}
+
+
