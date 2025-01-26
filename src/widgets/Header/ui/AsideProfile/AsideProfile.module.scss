@@ -1,0 +1,17 @@
+.AsideProfile {
+  display: flex;
+  gap: 15px;
+}
+
+.avatarWrapper > svg {
+  border-radius: 12px;
+  background-color: rgba(38, 38, 38, 0.04);
+  fill: gray;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logOut {
+  display: flex;
+  align-items: center;
+}

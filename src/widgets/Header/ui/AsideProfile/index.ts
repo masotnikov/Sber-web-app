@@ -1,0 +1,1 @@
+export {AsideProfile} from './AsideProfile';
