@@ -1,3 +1,16 @@
-.LinkToCatalog {
+.CatalogLink {
+  aspect-ratio: 1;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(38, 38, 38, 0.04);
+  border-radius: 12px;
+  margin-left: 12px;
+  margin-right: 12px;
 
+  &:hover {
+    background-color: rgba(38, 38, 38, 0.08);
+    transition: background-color 100ms linear;
+  }
 }
