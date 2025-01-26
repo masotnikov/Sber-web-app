@@ -2,8 +2,9 @@ import {FC} from "react";
 import {classNames} from "@/shared/lib/classNames/classNames";
 import cls from "./Header.module.scss";
 import {LinkLogo} from "@/shared/ui/LinkLogo/LinkLogo";
-import {HeaderMainPanel} from "@/widgets/Header/ui/HeaderMainPanel";
 import {getRouteMain} from "@/shared/const/router";
+import {MainPanel} from "@/widgets/Header/ui/MainPanel";
+import {AsideProfile} from "@/widgets/Header/ui/AsideProfile";
 
 interface HeaderProps {
   className?: string;
@@ -15,8 +16,8 @@ export const Header: FC<HeaderProps> = (props) => {
   return (
     <header className={classNames(cls.Header, {}, [className])}>
       <LinkLogo to={getRouteMain()}/>
-      <HeaderMainPanel/>
-      <aside className='aside'></aside>
+      <MainPanel/>
+      <AsideProfile/>
     </header>
   );
 };
