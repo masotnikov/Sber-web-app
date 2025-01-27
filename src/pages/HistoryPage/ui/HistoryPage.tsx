@@ -1,13 +1,13 @@
-import React from 'react';
+import React, { JSX } from "react";
 
-const HistoryPage = () => {
-    return (
-        <div>
-            <h1 className={'history-page'}>
+const HistoryPage = (): JSX.Element => {
+  return (
+    <div>
+      <h1 className={"history-page"}>
                 History Page
-            </h1>
-        </div>
-    );
+      </h1>
+    </div>
+  );
 };
 
 export default HistoryPage;

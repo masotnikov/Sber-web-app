@@ -1,1 +1,1 @@
-export {AsideProfile} from './AsideProfile';
+export { AsideProfile } from "./AsideProfile";

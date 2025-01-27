@@ -1,3 +1,3 @@
-import {lazy} from 'react';
+import { lazy } from "react";
 
-export const PaymentsPageLazy = lazy(() => import('./PaymentsPage'));
+export const PaymentsPageLazy = lazy(() => import("./PaymentsPage"));

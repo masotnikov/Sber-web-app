@@ -1,17 +1,16 @@
-import React from 'react';
-import {createRoot} from 'react-dom/client';
+import React from "react";
+import { createRoot } from "react-dom/client";
 import App from "./app/App";
-import {BrowserRouter} from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
-console.log('React application starts rendering...');
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 if (!rootElement) {
-    throw new Error('Root element not found');
+  throw new Error("Root element not found");
 }
 const root = createRoot(rootElement);
 
 root.render(
-    <BrowserRouter>
-      <App/>
-    </BrowserRouter>
+  <BrowserRouter>
+    <App/>
+  </BrowserRouter>
 );
