@@ -61,7 +61,7 @@ export default [
       ...pluginReact.configs.recommended.rules,
       "react/jsx-key": "error",
       "react/jsx-no-bind": ["error", { "allowArrowFunctions": false }],
-      "react/react-in-jsx-scope": "off", // React 18 не требует импорта React
+      "react/react-in-jsx-scope": "off",
     },
   },
 
