@@ -4,13 +4,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(38, 38, 38, 0.04);
+  background-color: rgb(38 38 38 / 4%);
   border-radius: 12px;
   margin-left: 12px;
   margin-right: 12px;
 
   &:hover {
-    background-color: rgba(38, 38, 38, 0.08);
+    background-color: rgb(38 38 38 / 8%);
     transition: background-color 100ms linear;
   }
 }
