@@ -3,6 +3,7 @@ import js from "@eslint/js";
 import pluginReact from "eslint-plugin-react";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsParser from "@typescript-eslint/parser";
+import pluginJest from "eslint-plugin-jest";
 
 /** @type {import("eslint").Linter.FlatConfig[]} */
 export default [
@@ -15,7 +16,10 @@ export default [
       parserOptions: {
         project: "./tsconfig.json",
       },
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        ...globals.jest
+      },
     },
     plugins: {
       react: pluginReact, // Добавлено
@@ -82,4 +86,20 @@ export default [
       "@typescript-eslint/prefer-destructuring": ["error"],
     },
   },
+
+
+  //JestConfig
+  {
+    files: ["**/__tests__/**/*.ts", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts"],
+    plugins: { jest: pluginJest },
+    extends: ["plugin:jest/recommended"],
+    rules: {
+      "jest/no-disabled-tests": "warn",
+      "jest/no-focused-tests": "error",
+      "jest/no-identical-title": "error",
+      "jest/prefer-to-have-length": "warn",
+      "jest/valid-expect": "error",
+    },
+  },
+
 ];
