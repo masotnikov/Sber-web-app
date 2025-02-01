@@ -14,8 +14,6 @@ const config: Config = {
   ],
   moduleFileExtensions: [
     "js",
-    "mjs",
-    "cjs",
     "jsx",
     "ts",
     "tsx",
@@ -23,8 +21,9 @@ const config: Config = {
     "node"
   ],
   moduleDirectories: [
-    "node_modules"
+    "node_modules", "src"
   ],
+  modulePaths: ["<rootDir>/src"],
   testMatch: [
     "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
   ],
