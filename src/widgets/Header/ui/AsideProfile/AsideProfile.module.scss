@@ -1,6 +1,8 @@
 .AsideProfile {
   display: flex;
   gap: 15px;
+  flex: 1 1 0;
+  justify-content: center;
 }
 
 .avatarWrapper > svg {

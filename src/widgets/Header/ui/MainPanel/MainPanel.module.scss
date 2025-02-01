@@ -1,13 +1,15 @@
 .MainPanel {
   display: flex;
   align-items: center;
+
+  //flex: 1 1 0;
   width: 720px;
 }
 
 .searchWrapper {
   display: flex;
-  flex-grow: 1;
   position: relative;
+  width: 100%;
 }
 
 .searchInput {
