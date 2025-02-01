@@ -22,12 +22,12 @@ export default [
       },
     },
     plugins: {
-      react: pluginReact, // Добавлено
+      react: pluginReact,
       "@typescript-eslint": tseslint,
     },
     settings: {
       react: {
-        version: "detect", // Версия React определяется автоматически
+        version: "detect",
       },
     },
     rules: {
@@ -92,8 +92,8 @@ export default [
   {
     files: ["**/__tests__/**/*.ts", "**/*.test.ts", "**/*.test.tsx", "**/*.spec.ts"],
     plugins: { jest: pluginJest },
-    extends: ["plugin:jest/recommended"],
     rules: {
+      ...pluginJest.configs.recommended.rules,
       "jest/no-disabled-tests": "warn",
       "jest/no-focused-tests": "error",
       "jest/no-identical-title": "error",
