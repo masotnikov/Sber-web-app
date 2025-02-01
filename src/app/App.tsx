@@ -1,6 +1,8 @@
 import React, { JSX } from "react";
 import "@/shared/styles/index.scss";
 import { Header } from "@/widgets/Header";
+import { AppRouter } from "@/app/providers/router";
+import { Navbar } from "@/widgets/Navbar/ui/Navbar";
 
 const App = (): JSX.Element => {
   return (
@@ -8,8 +10,10 @@ const App = (): JSX.Element => {
       <div className="scaffold__section">
         <Header/>
         <main className="scaffold__content">
-          <nav className="scaffold__nav"></nav>
-          <div className="scaffold__main"></div>
+          <Navbar/>
+          <div className="scaffold__main">
+            <AppRouter/>
+          </div>
           <aside className="scaffold__aside"></aside>
         </main>
       </div>
