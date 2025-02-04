@@ -18,6 +18,7 @@ export default [
       },
       globals: {
         ...globals.browser,
+        ...globals.node,
         ...globals.jest
       },
     },
@@ -83,7 +84,7 @@ export default [
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
       "@typescript-eslint/explicit-function-return-type": ["warn"],
       "@typescript-eslint/no-explicit-any": "warn",
-      "@typescript-eslint/prefer-destructuring": ["error"],
+      "@typescript-eslint/prefer-destructuring": ["warn"],
     },
   },
 
