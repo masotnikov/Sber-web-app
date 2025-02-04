@@ -14,10 +14,12 @@ export interface BuildOptions {
     port: number;
     isDev: boolean;
     platform?: BuildPlatform;
+    analyze?: boolean;
 }
 
 export interface BuildEnv {
     mode: BuildMode;
     port: number;
     platform?: BuildPlatform;
+    analyze?: boolean;
 }
