@@ -23,14 +23,17 @@ const config: Config = {
   moduleDirectories: [
     "node_modules", "src"
   ],
-  modulePaths: ["<rootDir>src"],
+  modulePaths: ["<rootDir>/src"],
   moduleNameMapper: {
     "^@/(.*)$": "<rootDir>/src/$1",
+    "^.+\\.(css|scss)$": "identity-obj-proxy"
   },
   testMatch: [
     "<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)",
   ],
   rootDir: "../../",
+  setupFilesAfterEnv: ["<rootDir>/config/jest/setupTests.ts"],
+
   // automock: false,
 
   // Stop running tests after `n` failures
@@ -146,7 +149,6 @@ const config: Config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
