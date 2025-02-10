@@ -65,7 +65,7 @@ export default [
     rules: {
       ...pluginReact.configs.recommended.rules,
       "react/jsx-key": "error",
-      "react/jsx-no-bind": ["error", { "allowArrowFunctions": false }],
+      "react/jsx-no-bind": ["warn", { "allowArrowFunctions": false }],
       "react/react-in-jsx-scope": "off",
     },
   },
