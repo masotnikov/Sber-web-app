@@ -8,10 +8,8 @@
 }
 
 .link {
-  display: inline-flex;
-  flex-direction: row-reverse;
+  display: flex;
   font-size: 17px;
-  line-height: 24px;
   font-weight: 500;
   margin-bottom: 12px;
   padding: 16px 0;
@@ -25,12 +23,18 @@
     color: transparent;
   }
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: black;
 
     svg {
       fill: black;
     }
+  }
+}
+
+.activeLink {
+  color: black;
+  svg {
+    fill: black;
   }
 }

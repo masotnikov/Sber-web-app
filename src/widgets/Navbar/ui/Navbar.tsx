@@ -3,6 +3,7 @@ import { classNames } from "@/shared/lib/classNames/classNames";
 import cls from "./Navbar.module.scss";
 import { AppLink } from "@/shared/ui/AppLink";
 import { links } from "@/widgets/Navbar/model/links";
+import { useLocation } from "react-router-dom";
 
 interface NavbarProps {
   className?: string;
@@ -10,16 +11,17 @@ interface NavbarProps {
 
 export const Navbar: FC<NavbarProps> = (props) => {
   const { className } = props;
+  const location = useLocation(); 
 
   return (
     <nav className={classNames(cls.Navbar, {}, [className])}>
       {
         links.map(({ icon, route, title }) => (
           <AppLink
-            className={cls.link} key={route}
+            className={classNames(cls.link, { [cls.activeLink]: location.pathname === route })} key={route}
             to={route}>
-            <span>{title}</span>
             <span>{icon}</span>
+            <span>{title}</span>
           </AppLink>
         ))
       }
